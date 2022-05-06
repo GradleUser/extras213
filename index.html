@@ -60,6 +60,7 @@
           var canvas = document.getElementById('canvas');
           canvas.width = window.innerWidth;
           canvas.height = window.innerHeight;
+          canvas.addEventListener('click', bringFocus, false);
           canvas.addEventListener("webglcontextlost", function(e) {
             alert('WebGL context lost. You will need to reload the page.');
             e.preventDefault();
@@ -68,7 +69,11 @@
         })(),
         setStatus: function(text) {
         }
-      };
+        
+  function bringFocus(e) {
+    window.focus();
+  }
+ };
     </script>
     <script async type="text/javascript" src="exraed.js"></script>
     <script>
