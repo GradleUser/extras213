@@ -59,6 +59,7 @@
           var canvas = document.getElementById('canvas');
           canvas.width = window.innerWidth;
           canvas.height = window.innerHeight;
+          canvas.addEventListener('click', function() {canvas.focus();}, false);
           canvas.addEventListener("webglcontextlost", function(e) {
             alert('WebGL context lost. You will need to reload the page.');
             e.preventDefault();
