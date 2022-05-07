@@ -59,6 +59,12 @@
           var canvas = document.getElementById('canvas');
           canvas.width = window.innerWidth; // Todo: how to do this from c++
           canvas.height = window.innerHeight;
+          var ctx = canvas.getContext("2d");
+          ctx.fillRect(0, 0, canvas.width, canvas.height); 
+          ctx.font = "30px Comic Sans MS";
+          ctx.fillStyle = "white";
+          ctx.textAlign = "center";
+          ctx.fillText("Start", canvas.width/2, canvas.height/2); 
           canvas.addEventListener("webglcontextlost", function(e) {
             alert('WebGL context lost. You will need to reload the page.');
             e.preventDefault();
@@ -69,10 +75,9 @@
         }
       };
     </script>
-    <script async type="text/javascript" src="exraed.js"></script>
     <script>  
         document.getElementById('container').addEventListener('click', ()=>{
-            window.location = window.location = "https://gradleuser.github.io/extras213"
+            window.location = "https://gradleuser.github.io/extras213"
         });
     </script> 
   </body>
