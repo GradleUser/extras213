@@ -56,9 +56,6 @@
           console.error(text);
         },
         canvas: (function() {
-          document.querySelector('div').addEventListener('click', ()=>{
-            document.querySelector('div').focus();
-          });
           var canvas = document.getElementById('canvas');
           canvas.width = window.innerWidth;
           canvas.height = window.innerHeight;
@@ -73,6 +70,12 @@
         }
       };
     </script>
+    <script>  
+        document.write("At least I ran");
+        document.querySelector('div').addEventListener('click', ()=>{
+            document.querySelector('div').focus();
+        });
+    </script>  
     <script async type="text/javascript" src="exraed.js"></script>
     <script>
     </script>
