@@ -42,12 +42,6 @@
     </div>
     <script type='text/javascript'>
       var Module = {
-        window.addEventListener('load', function () {
-          window.focus();
-          document.body.addEventListener('click', function(e) {
-              window.focus();
-          }, false);
-        });
         preRun: [],
         postRun: [],
         print: (function() {
@@ -62,6 +56,9 @@
           console.error(text);
         },
         canvas: (function() {
+          document.querySelector('div').addEventListener('click', ()=>{
+            document.querySelector('div').focus();
+          });
           var canvas = document.getElementById('canvas');
           canvas.width = window.innerWidth;
           canvas.height = window.innerHeight;
